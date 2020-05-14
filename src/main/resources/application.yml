@@ -1,0 +1,21 @@
+server:
+  port: 8040
+opentracing: 
+  jaeger:
+    udp-sender:
+      host: localhost
+      port: 6831
+spring:
+  application:
+    name: users
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/microservicesDB
+    username: root
+    password: Admin@1212
+  jpa:
+    hibernate.ddl-auto: update  
+    show-sql: true
+    properties: 
+      hibernate:
+        dialect : org.hibernate.dialect.MySQL5Dialect
