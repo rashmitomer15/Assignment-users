@@ -3,16 +3,16 @@ server:
 opentracing: 
   jaeger:
     udp-sender:
-      host: localhost
-      port: 6831
+      host: ${JAEGER_HOST}  ## localhost
+      port: ${JAEGER_PORT}   ## 6831
 spring:
   application:
     name: users
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/microservicesDB
-    username: root
-    password: Admin@1212
+    url: ${MYSQLDB_URL}
+    username: ${MYSQLDB_USERNAME}
+    password: ${MYSQLDB_PASSWORD}
   jpa:
     hibernate.ddl-auto: update  
     show-sql: true
